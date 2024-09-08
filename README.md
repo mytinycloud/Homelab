@@ -6,27 +6,7 @@ Documentation of my Home Lab Setup
 ## Introduction
 Welcome to the documentation for my home lab setup. This repository contains detailed information about the hardware, software, and network configuration used in my home lab. This setup is designed to provide a robust environment for learning, experimentation, development, and be as close to enterprise level as possible. I have stuck to a naming convention based on *Dune* by Frank Herbert.
 
-## Contents
-1. Introduction
-2. Hardware Setup
-   - Servers
-     - Server 1: Proxmox node 1 (Arrakis)
-     - Server 2: Proxmox node 2 (Caladan)
-   - Network Devices
-3. Network Configuration
-   - IP Addressing
-   - DNS and DHCP
-   - Network Diagram
-4. Software Installation
-   - Operating Systems
-   - Virtualization
-5. Security Measures
-   - Firewalls
-   - Access Control
-6. Monitoring and Maintenance
-   - Monitoring Tools
-   - Regular Maintenance
-7. Conclusion
+[[_TOC_]]
 
 ## Hardware Setup
 
@@ -62,16 +42,17 @@ Welcome to the documentation for my home lab setup. This repository contains det
 
 ### IP Addressing
 - **Schema**:
-  - **Management Network (10.0.0.0/24)**: For Proxmox hosts, iDRAC/IPMI, switches, etc. (254 usable addresses)
-  - **Network (10.0.9.0/24)**: For smart home devices (254 usable addresses)
-  - **Storage Network (10.0.1.0/24)**: Dedicated to Ceph and other storage traffic (254 usable addresses)
-  - **Home Automation Network (10.0.10.0/24)**: Dedicated to home automation services (254 usable addresses)
-  - **VM Network (10.0.2.0/23)**: For general VM usage (510 usable addresses)
-  - **Client Network (192.168.0.0/23)**: For personal devices (computers, phones, etc.) (510 usable addresses)
-  - **Container/Kubernetes Network (10.0.3.0/22)**: Larger subnet for container networking (1022 usable addresses)
-  - **Guest Network (192.168.2.0/24)**: Isolated network for guests (254 usable addresses)
-  - **DMZ (10.0.8.0/24)**: For publicly accessible services (254 usable addresses)
-  - **VPN Network (172.0.0.0/24)**: For VPN clients (254 usable addresses)
+  - **Management Network (10.0.0.0/24)**: For Proxmox hosts, iDRAC/IPMI, switches, etc. (**254** usable addresses)
+  - **Network (10.0.9.0/24)**: For smart home devices (**254** usable addresses)
+  - **Storage Network (10.0.1.0/24)**: Dedicated to Ceph and other storage traffic (**254** usable addresses)
+  - **Home Automation Network (10.0.10.0/24)**: Dedicated to home automation services (**254** usable addresses)
+  - **VM Network (10.0.2.0/23)**: For general VM usage (**510** usable addresses)
+  - **Client Network (192.168.0.0/23)**: For personal devices (computers, phones, etc.) (**510** usable addresses)
+  - **Container/Kubernetes Network (10.0.3.0/22)**: Larger subnet for container networking (**1022** usable addresses)
+  - **Guest Network (192.168.2.0/24)**: Isolated network for guests (**254** usable addresses)
+  - **DMZ (10.0.8.0/24)**: For publicly accessible services (**254** usable addresses)
+  - **VPN Network (172.0.0.0/24)**: For VPN clients (**254**usable addresses)
+
 - **Static vs. Dynamic**: [Details]
 
 ### DNS and DHCP
